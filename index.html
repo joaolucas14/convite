@@ -56,28 +56,28 @@
     function sim() {
         alert("Você aceitou ser meu padrinho! 😁");
         // redireciona para um URL após clicar no SIM
-    }
-    function playmusic() {
-        var audio = document.getElementById("audioPlayer");
-        if (audio.paused) {
-            audio.play();
-        } else {
-            audio.pause();
-            audio.currentTime = 0;
+        // }
+        // function playmusic() {
+        //     var audio = document.getElementById("audioPlayer");
+        //     if (audio.paused) {
+        //         audio.play();
+        //     } else {
+        //         audio.pause();
+        //         audio.currentTime = 0;
+        //     }
+        // }
+
+        function desvia(btn) {
+            // btn declarado na função
+            btn.style.position = 'absolute';
+            btn.style.bottom = geraPosicao(10, 90);
+            btn.style.left = geraPosicao(10, 90);
+            console.log('opa, desviei...');
         }
-    }
 
-    function desvia(btn) {
-        // btn declarado na função
-        btn.style.position = 'absolute';
-        btn.style.bottom = geraPosicao(10, 90);
-        btn.style.left = geraPosicao(10, 90);
-        console.log('opa, desviei...');
-    }
-
-    function geraPosicao(min, max) {
-        return (Math.random() * (max - min) + min) + "%";
-    }
+        function geraPosicao(min, max) {
+            return (Math.random() * (max - min) + min) + "%";
+        }
 
 </script>
 
