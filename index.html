@@ -43,10 +43,10 @@
         <h2 style="width: 350px; text-align: center; font-weight: bold; padding: 10px; margin: auto;">Quer ser meu
             padrinho de investidura?</h2>
         <div style=" margin: auto;width: 170px;">
-            <button style="position: fixed;display: block;" class="btn" onclick="playmusic(); sim()">SIM</button>
+            <button style="position: fixed;display: block;" class="btn" onclick="sim()">SIM</button>
             <button class="btn" onclick="desvia(this)" onmouseover="desvia(this)"
                 style="position: absolute;">NÃO</button>
-            <audio id="audioPlayer" src="audio.mp3"></audio>
+            <!-- <audio id="audioPlayer" src="audio.mp3"></audio> -->
         </div>
     </div>
 </body>
@@ -55,29 +55,19 @@
 <script>
     function sim() {
         alert("Você aceitou ser meu padrinho! 😁");
-        // redireciona para um URL após clicar no SIM
-        // }
-        // function playmusic() {
-        //     var audio = document.getElementById("audioPlayer");
-        //     if (audio.paused) {
-        //         audio.play();
-        //     } else {
-        //         audio.pause();
-        //         audio.currentTime = 0;
-        //     }
-        // }
+    }
 
-        function desvia(btn) {
-            // btn declarado na função
-            btn.style.position = 'absolute';
-            btn.style.bottom = geraPosicao(10, 90);
-            btn.style.left = geraPosicao(10, 90);
-            console.log('opa, desviei...');
-        }
+    function desvia(btn) {
+        // btn declarado na função
+        btn.style.position = 'absolute';
+        btn.style.bottom = geraPosicao(10, 90);
+        btn.style.left = geraPosicao(10, 90);
+        console.log('opa, desviei...');
+    }
 
-        function geraPosicao(min, max) {
-            return (Math.random() * (max - min) + min) + "%";
-        }
+    function geraPosicao(min, max) {
+        return (Math.random() * (max - min) + min) + "%";
+    }
 
 </script>
 
